@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/movieDetailsBaseLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/detailsMovieName"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@android:color/holo_blue_dark"
+            android:gravity="bottom"
+            android:paddingBottom="40dp"
+            android:paddingLeft="20dp"
+            android:textSize="@dimen/details_movie_text_size"
+            tools:text="Avengers: Age of Ultron" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/details_innerlinear_height"
+            android:layout_margin="@dimen/details_innerlinear_margin"
+            android:weightSum="10">
+
+            <ImageView
+                tools:src="@mipmap/ic_launcher"
+                android:id="@+id/detailsMoviePoster"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:adjustViewBounds="true" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textSize="@dimen/details_date_text_size"
+                    android:id="@+id/detailsReleaseDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/details_date_margin_top"
+                    tools:text="12/12/12" />
+
+
+                <TextView
+                    android:textSize="@dimen/details_rating_text_size"
+                    android:id="@+id/detailsRatingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/details_rating_margin_top"
+                    tools:text="5/10" />
+
+                <Button
+                    android:id="@+id/detailsAddToFavButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_addtofav_button_text"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginLeft="@dimen/details_overview_margin_left"
+            android:layout_marginRight="@dimen/details_overview_margin_right"
+            android:layout_marginTop="@dimen/details_overview_margin_top"
+            android:id="@+id/detailsMovieOverview"
+            android:textSize="@dimen/details_overview_text_size"
+            tools:text="Blah once upon a time, I really dont know how to write a story. I suck at this and my head is aching."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_marginTop="15dp"
+            android:id="@+id/SplitLine_hor1"
+            android:layout_width="match_parent"
+            android:layout_height= "2dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_marginTop="@dimen/details_trailertext_margin_top"
+            android:paddingLeft="@dimen/details_trailertext_padding_left"
+            android:textSize="@dimen/details_trailertext_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/details_trailertext_text"/>
+
+    </LinearLayout>
+
+</ScrollView>

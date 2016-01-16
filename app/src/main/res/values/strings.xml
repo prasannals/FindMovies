@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Find Movies</string>
+    <string name="api_key"></string>
+    <string name="videos_endpoint_link">http://api.themoviedb.org/3/movie/%1$d/videos?api_key=%2$s</string>
+    <string name="reviews_endpoint_link">http://api.themoviedb.org/3/movie/%1$d/reviews?api_key=%2$s</string>
+    <string name="sort_by_rating">http://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc&amp;vote_count.gte=100&amp;api_key=%1$s&amp;page=%2$d</string>
+    <string name="sort_by_popularity">http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&amp;api_key=%1$s&amp;page=%2$d</string>
+    <string name="credits">This app is created by Prasanna Lakkur Subramanyam as a part of a project towards passing the Android Nanodegree at Udacity. Any commercial use won\'t be possible as I\'m not even gonna launch this anywhere. Just thought I\'d put this in here to sound professional.\n\nThis product uses the TMDb API but is not endorsed or certified by TMDb.( www.themoviedb.org ).\n</string>
+    <string name="credits_title">Credits</string>
+    <string name="positive_button">OK</string>
+    <string name="details_addtofav_button_text">Add to favorites</string>
+    <string name="details_trailertext_text">Trailers</string>
+    <string name="reviews_title_text">Reviews</string>
+    <string name="menu_share_movie_text">Share Movie</string>
+    <string name="movie_list_menu_popularity_text">Sort by Popularity</string>
+    <string name="movie_list_menu_rating_text">Sort by Rating</string>
+    <string name="movie_list_menu_favorites_text">Favorites</string>
+    <string name="movie_list_menu_credits_text">Credits</string>
+</resources>
