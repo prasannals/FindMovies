@@ -21,18 +21,19 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         //if favorites are being displayed, there'll be no EXTRA_POSITION_KEY entry.
         // if index == -1 then fav being displayed
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
         if (index == -1) {
             //fav being displayed. There is a parcelable to send!
             MovieModel movieModel = extras.getParcelable(MovieListFragment.MOVIE_PARCELABLE_KEY);
 
-            FragmentManager fragmentManager = getSupportFragmentManager();
             if (fragmentManager.findFragmentByTag(DETAILS_FAV_FRAG_TAG) == null)
                 fragmentManager.beginTransaction().add(R.id.movieDetailsFragmentContainer,
                         MovieDetailsFragment.getInstance(movieModel), DETAILS_FAV_FRAG_TAG).commit();
         } else {
-            getSupportFragmentManager().beginTransaction().add(R.id.movieDetailsFragmentContainer,
-                    MovieDetailsFragment.getInstance(index), DETAILS_FRAG_TAG).commit();
+            //to avoid duplicate fragments being added
+            if (fragmentManager.findFragmentByTag(DETAILS_FRAG_TAG) == null)
+                getSupportFragmentManager().beginTransaction().add(R.id.movieDetailsFragmentContainer,
+                        MovieDetailsFragment.getInstance(index), DETAILS_FRAG_TAG).commit();
         }
     }
 }
