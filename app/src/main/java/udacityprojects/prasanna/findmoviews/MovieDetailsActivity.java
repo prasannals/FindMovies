@@ -32,7 +32,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         } else {
             //to avoid duplicate fragments being added
             if (fragmentManager.findFragmentByTag(DETAILS_FRAG_TAG) == null)
-                getSupportFragmentManager().beginTransaction().add(R.id.movieDetailsFragmentContainer,
+                fragmentManager.beginTransaction().add(R.id.movieDetailsFragmentContainer,
                         MovieDetailsFragment.getInstance(index), DETAILS_FRAG_TAG).commit();
         }
     }
